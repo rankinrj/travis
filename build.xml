@@ -70,7 +70,7 @@
         </junit>
     </target>
               	<echo>Running junit test suite...</echo>
-              	   <target name="testsuite" description="Running Test Suite">
+              	   <target name="test" depends="build" description="Running Test Suite">
               	     <delete dir="${junit.out.dir.xml}"/>
               	     <mkdir  dir="${junit.out.dir.xml}"/>
               	     <junit printsummary="yes" haltonfailure="yes">
