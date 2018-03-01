@@ -69,5 +69,17 @@
             <classpath refid="travis.classpath"/>
         </junit>
     </target>
-    
+              	<echo>Running junit test suite...</echo>
+              	   <target name="testsuite" description="Running Test Suite">
+              	     <delete dir="${junit.out.dir.xml}"/>
+              	     <mkdir  dir="${junit.out.dir.xml}"/>
+              	     <junit printsummary="yes" haltonfailure="yes">
+              	       <classpath refid="travis.classpath"/>
+              	       <sysproperty key="ant.home" value="${ant.home}"/>
+              	       <formatter type="xml"/>
+              	       <batchtest fork="yes" todir="${junit.out.dir.xml}">
+              	         <fileset dir="${classes.dir}" includes="**/testHello.class"/>
+              	       </batchtest>
+              	    </junit>
+              	  </target>
 </project>
