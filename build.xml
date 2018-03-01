@@ -61,11 +61,11 @@
             <classpath refid="travis.classpath"/>
         </java>
     </target>
-    <target name="test (3)">
+    <target name="testHello (3)">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="travis.test" todir="${junit.output.dir}"/>
+            <test name="travis.testHello" todir="${junit.output.dir}"/>
             <classpath refid="travis.classpath"/>
         </junit>
     </target>
