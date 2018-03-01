@@ -5,4 +5,7 @@ public class hello {
         // Prints "Hello, World" to the terminal window.
         System.out.println("Hello, World");
     }
+	public static int sq(int a){
+		return a*a;
+	}
 }
