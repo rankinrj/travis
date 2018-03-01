@@ -56,12 +56,12 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="hello (1)">
+    <target name="hello">
         <java classname="travis.hello" failonerror="true" fork="yes">
             <classpath refid="travis.classpath"/>
         </java>
     </target>
-    <target name="testHello (3)">
+    <target name="testHello">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
