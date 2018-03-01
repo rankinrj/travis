@@ -61,9 +61,9 @@
             <classpath refid="travis.classpath"/>
         </java>
     </target>
-    <target name="testHello">
+    <target name="testHello" depends="build">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
+        <junit fork="yes" printsummary="yes" haltonfailure="yes" haltonerror="yes">
             <formatter type="xml"/>
             <test name="travis.testHello" todir="${junit.output.dir}"/>
             <classpath refid="travis.classpath"/>
